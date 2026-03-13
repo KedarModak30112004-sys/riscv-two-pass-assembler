@@ -1,1 +1,4 @@
+build/
+output/
+*.exe
 Git_Commands.txt
