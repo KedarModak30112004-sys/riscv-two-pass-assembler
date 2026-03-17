@@ -3,6 +3,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<ctype.h>
+#include<stdlib.h>
 #include"symbol_table.h"
 
 // Removes the leading and trailing whitespaces from the string.
@@ -52,6 +53,11 @@ void add_symbol(char *line, int pc){
     *colon = '\0';           // split label and instruction
 
     trim(line);
+
+    // to convert lower case symbols to upper case, in order to prevent case sensitivity
+    for(int i = 0; line[i]; i++){
+        line[i] = toupper(line[i]);
+    }
 
     if(find_symbol(line) != -1){
         printf("Error: Duplicate label: %s\n", line);

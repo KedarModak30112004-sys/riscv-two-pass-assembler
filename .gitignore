@@ -1,4 +1,13 @@
-build/
-output/
-*.exe
+# My git command notes:
 Git_Commands.txt
+
+# Build files
+build/
+*.exe
+
+# Output files
+output/
+
+# OS files
+.DS_Store
+Thumbs.db

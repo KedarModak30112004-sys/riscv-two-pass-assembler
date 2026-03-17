@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<ctype.h>
 #include"encoder.h"
 #include"symbol_table.h"
 
@@ -206,7 +207,7 @@ unsigned int encode(Token tokens[], int count, int pc){
                 int label_address = find_symbol(label);
                 if( label_address == -1){
                     printf("Error: Undefined label: %s\n", label);
-                    return 0;
+                    exit(1);
                 }
 
                 int offset = label_address - (pc + 4);  

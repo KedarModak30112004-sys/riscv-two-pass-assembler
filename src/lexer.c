@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<ctype.h>
+#include<stdlib.h>
 #include"lexer.h"
 
 void add_token(Token tokens[], int* count, TokenType type, const char* value){
@@ -53,7 +54,7 @@ int lexer(char* line, Token tokens[]){
         if(*ptr == ')'){
             
             char temp[2] = {*ptr, '\0'};
-            add_token(tokens, &count, LPAREN, temp);
+            add_token(tokens, &count, RPAREN, temp);
             ptr++;
             continue;
         }

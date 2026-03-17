@@ -58,7 +58,7 @@ int parser(Token tokens[], int count, int line_num){
                 }
             }
 
-            printf(" Intruction Valid!");
+            printf(" Instruction Valid!");
             return 1;
         }
     }
